@@ -7,7 +7,7 @@ Lua has kick-started me into a hobby of programming, so don't expect this code t
 This repository contains Lua scripts for the following games:
 
 ### The Legend of Zelda: Link's Awakening (DX)
-These scripts should work on all versions of the game (the original, remake, as well as the localizations thereof).
+These scripts should work on all versions of the game (the original, remake, as well as the localizations thereof). Make sure to include the resources folder provided in the game's folder!
 
 - Sub-pixel Editor - A simple graphical user interface for editing & viewing Link's X and Y sub-pixel positions on the fly.
 - Input Viewer - A graphical input viewer for those interested in making video content for demonstration purposes.

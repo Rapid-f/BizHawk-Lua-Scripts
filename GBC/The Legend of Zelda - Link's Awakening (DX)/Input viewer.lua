@@ -1,5 +1,6 @@
-print("LADX input viewer\nChange the layout by clicking \"Edit\" in the console window and changing the layout parameter (first parameter, set to \"2\" by default) of the drawController() call in the main loop.")
+print("--LADX input viewer--\nChange layout with \"newlayout = <layout #>\"\nLayout 1 - A layout that mimics the layout of the NES controller. it appears below Link's body.\nLayout 2 - A layout that overlays the button icons over Link's body, with cardinal inputs appearing next to Link in their respective direction.\nLayout 3 - An in-line layout the appears in the upper-left corner of the screen. This layout is useless unless one is recording at a low resolution.")
 buttonsGFX = "./resources/gfx/buttons.png"
+newlayout = 2
 
 function drawController(layout, x, y, inputData)
 	local buttonID         = {inputData.Up, inputData.Down, inputData.Left, inputData.Right, inputData.B, inputData.A, inputData.Select, inputData.Start}
@@ -29,6 +30,6 @@ while true do
 	                        y              = memory.read_u8(0xC145),
 	                        y_puddleOffset = memory.read_u8(0xC13B)}
 	
-	drawController(2, linkDrawPos.x - 16, linkDrawPos.y + linkDrawPos.y_puddleOffset - 24, currentInputs)
+	drawController(newlayout, linkDrawPos.x - 16, linkDrawPos.y + linkDrawPos.y_puddleOffset - 24, currentInputs)
 	emu.frameadvance();
 end
