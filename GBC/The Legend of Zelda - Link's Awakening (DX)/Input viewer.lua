@@ -26,6 +26,7 @@ end
 
 while true do
 	local currentInputs  = joypad.get()
+--	local currentInputs = movie.getinput(emu.framecount()) --Uncomment this line and comment the line above so that inputs show for a movie/TAS.
 	local linkDrawPos    = {x              = memory.read_u8(0xFF98),
 	                        y              = memory.read_u8(0xC145),
 	                        y_puddleOffset = memory.read_u8(0xC13B)}
